@@ -21,6 +21,8 @@ requirements:
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
   host:
+    - cython
+    - numpy
     - pip
     - python
     - setuptools
