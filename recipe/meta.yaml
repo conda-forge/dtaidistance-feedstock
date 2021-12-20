@@ -38,6 +38,9 @@ test:
     - dtaidistance.clustering
     - dtaidistance.dtw
     - dtaidistance.dtw_cc
+    - dtaidistance.dtw_cc_numpy
+    - dtaidistance.dtw_cc_omp
+    - dtaidistance.ed_cc
 
 about:
   home: https://github.com/wannesm/dtaidistance
