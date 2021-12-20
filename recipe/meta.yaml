@@ -18,6 +18,8 @@ requirements:
     - {{ compiler('c') }}
     - cython
     - numpy
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
   host:
     - pip
     - python
