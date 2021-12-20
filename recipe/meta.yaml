@@ -35,6 +35,9 @@ requirements:
 test:
   imports:
     - dtaidistance
+    - dtaidistance.clustering
+    - dtaidistance.dtw
+    - dtaidistance.dtw_cc
 
 about:
   home: https://github.com/wannesm/dtaidistance
