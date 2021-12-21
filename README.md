@@ -217,4 +217,5 @@ Feedstock Maintainers
 =====================
 
 * [@m-rossi](https://github.com/m-rossi/)
+* [@wannesm](https://github.com/wannesm/)
 
