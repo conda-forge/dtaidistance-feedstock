@@ -10,7 +10,7 @@ source:
   sha256: 9d9b5be57f1abdac504e271be2d1c9d10cdd7b5cf30b435dfba8b05090a531b6
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -18,7 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - cython
     - numpy
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
   host:
+    - cython
+    - numpy
     - pip
     - python
     - setuptools
@@ -31,6 +35,12 @@ requirements:
 test:
   imports:
     - dtaidistance
+    - dtaidistance.clustering
+    - dtaidistance.dtw
+    - dtaidistance.dtw_cc
+    - dtaidistance.dtw_cc_numpy
+    - dtaidistance.dtw_cc_omp  # [not linux]
+    - dtaidistance.ed_cc
 
 about:
   home: https://github.com/wannesm/dtaidistance
