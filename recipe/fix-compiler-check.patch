@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index 05a16010e46da20739a3467408592bb0480128df..5cc27ec9de25eb577cb4e513d5e59c82834ddc8d 100755
+--- a/setup.py
++++ b/setup.py
+@@ -182,8 +182,8 @@ class MyBuildExtCommand(BuildExtCommand):
+             print('Using Homebrew LLVM settings ({})'.format(self.compiler.compiler[0]))
+             c = 'llvm'
+         elif self.distribution.forcegnugcc or \
+-                (c == "unix" and ("gnu-gcc" in self.compiler.compiler[0]) or
+-                                 ("gnu-cc" in self.compiler.compiler[0])):
++                (c == "unix" and (("gnu-gcc" in self.compiler.compiler[0]) or
++                                  ("gnu-cc" in self.compiler.compiler[0]))):
+             print('Using GNU GCC settings ({})'.format(self.compiler.compiler[0]))
+             c = 'gnugcc'
+ 
