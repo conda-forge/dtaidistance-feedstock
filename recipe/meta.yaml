@@ -1,5 +1,5 @@
 {% set name = "dtaidistance" %}
-{% set version = "2.3.2" %}
+{% set version = "2.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9d9b5be57f1abdac504e271be2d1c9d10cdd7b5cf30b435dfba8b05090a531b6
+  sha256: 4924f9ee7847e458d789cbd894d06969304d1809c2be57dc9c6feb8972ae3e70
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -47,7 +47,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Distance measures for time series'
+  summary: Distance measures for time series
   doc_url: https://dtaidistance.readthedocs.io/en/latest/
   dev_url: https://github.com/wannesm/dtaidistance
 
