@@ -39,7 +39,7 @@ test:
     - dtaidistance.dtw
     - dtaidistance.dtw_cc
     - dtaidistance.dtw_cc_numpy
-    - dtaidistance.dtw_cc_omp  # [not linux]
+    - dtaidistance.dtw_cc_omp
     - dtaidistance.ed_cc
 
 about:
