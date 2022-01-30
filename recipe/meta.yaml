@@ -29,8 +29,9 @@ requirements:
     - wheel
   run:
     - {{ pin_compatible('numpy') }}
-    - matplotlib-base
+    - matplotlib-base >=3.0.0
     - python
+    - scipy
 
 test:
   imports:
