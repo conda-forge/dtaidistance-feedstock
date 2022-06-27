@@ -1,5 +1,5 @@
 {% set name = "dtaidistance" %}
-{% set version = "2.3.7" %}
+{% set version = "2.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 198ed7e147fee4791951d84707ecac95e3080dcbdb54848cdff6af3eb06186b8
+  sha256: 69787e3fc1dc8536c7b26201505ab4247677bed4be9aedb486d3beac1d911ce1
 
 build:
   number: 0
