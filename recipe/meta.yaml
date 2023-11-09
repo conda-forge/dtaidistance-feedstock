@@ -10,7 +10,7 @@ source:
   sha256: a3e471dd1ed5b22eff3f5dd4b285e6df1ba5a28be3322f51eef9e6571ea7090b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,8 +20,6 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
-    - cython
-    - numpy
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
   host:
