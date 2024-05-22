@@ -10,7 +10,7 @@ source:
   sha256: a3e471dd1ed5b22eff3f5dd4b285e6df1ba5a28be3322f51eef9e6571ea7090b
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
   host:
@@ -30,7 +31,6 @@ requirements:
     - setuptools
     - wheel
   run:
-    - {{ pin_compatible('numpy') }}
     - matplotlib-base >=3.0.0
     - python
     - scipy
