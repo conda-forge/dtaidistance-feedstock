@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f239f83783d92f9da3a9597a79d93e3d2f3fb81d972fd4703241f9bffe7dbb3d
+  patches:
+     - force-cythonize.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -31,7 +33,6 @@ requirements:
     - setuptools
     - wheel
   run:
-    - {{ pin_compatible('numpy') }}
     - matplotlib-base >=3.0.0
     - python
     - scipy

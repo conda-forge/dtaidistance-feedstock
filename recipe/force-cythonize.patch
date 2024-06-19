@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 9bcc047222abc8f402b789e83f1e2369fbcc4fef..1e7aed39499ba77bb2179f1d9589f405e2faef72 100755
+--- a/setup.py
++++ b/setup.py
+@@ -449,7 +449,7 @@ if cythonize is not None:
+     else:
+         print("WARNING: Numpy was not found, preparing a version without Numpy support.")
+
+-    ext_modules = cythonize(extensions, language_level=2)
++    ext_modules = cythonize(extensions, language_level=2, force=True)
+
+ else:
+     print("WARNING: Cython was not found, preparing a pure Python version.")
