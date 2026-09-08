@@ -1,13 +1,13 @@
 {% set name = "dtaidistance" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd4066800254fbd5b620e6462bb759c9d85b79ac2080b354cedc901f446b6c82
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4a87f5023d41e6b4e14b9e4001f3c316393e2b6be3f5efd776129cfcc701b4af
   patches:
     - force-cythonize.patch
 
