@@ -1,5 +1,5 @@
 context:
-  version: "2.5.0"
+  version: "2.5.1"
 
 package:
   name: dtaidistance
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dtaidistance/dtaidistance-${{ version }}.tar.gz
-  sha256: 4a87f5023d41e6b4e14b9e4001f3c316393e2b6be3f5efd776129cfcc701b4af
+  sha256: 707c7d323bafa4f5e835f15b6e3410fe628e5076506cb67248049e90a18e3a18
   patches:
     - force-cythonize.patch
 
 build:
   script: python -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
